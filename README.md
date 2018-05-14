@@ -9,3 +9,9 @@
 只要保持原作者署名和非商用，您可以自由地阅读、分享、修改。<br>
 详细的法律条文请参见[创意共享](https://creativecommons.org/licenses/by-nc/4.0/)网站。<br>
 
+### 用法
+1、在cmd中运行命令
+```
+node simpleWSserver.js
+```
+2、访问页面：simpleclient.html
