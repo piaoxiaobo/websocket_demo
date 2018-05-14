@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>  
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>websocket示例</title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+    <div id="connected">
+
+    </div>
+    
+    <script type="text/javascript">
+       
+        var onOpen = function() {
+                console.log("Socket opened.");
+                socket.send("Hi, Server!");
+            },
+            onClose = function() {
+                console.log("Socket closed.");
+            },
+
+            onMessage = function(data) {
+                console.log("We get signal:");
+                //转换成json数据
+                console.log(JSON.parse(data.data));
+                //数据测试
+                var a =document.getElementById('connected');
+                a.append(data.data)
+            },
+
+            onError = function() {
+                console.log("We got an error.");
+            },
+
+            //通讯地址
+            socket = new WebSocket("ws://127.0.0.1:8080/");
+
+        socket.onopen = onOpen;
+        socket.onclose = onClose;
+        socket.onerror = onError;
+        socket.onmessage = onMessage;
+    </script>
+</body>
+</html>
+

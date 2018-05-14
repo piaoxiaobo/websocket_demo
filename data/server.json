@@ -1,0 +1,17 @@
+[
+  {
+    "serverId":"前服务器",
+    "status":"正常",
+    "scan":"正常"
+  },
+  {
+    "serverId":"数据服务器",
+    "status":"正常",
+    "scan":"正常"
+  },
+  {
+    "serverId":"是被服务器",
+    "status":"正常",
+    "scan":"正常"
+  }
+]
